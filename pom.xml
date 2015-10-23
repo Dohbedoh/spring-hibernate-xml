@@ -6,11 +6,11 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dohbedoh</groupId>
-    <artifactId>spring-hibernate-xml-sandbox</artifactId>
+    <artifactId>spring-hibernate-xml</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>spring-hibernate-xml-sandbox</name>
+    <name>spring-hibernate-xml</name>
     <description>Sandbox for Spring/Hibernate framework</description>
 
     <properties>
