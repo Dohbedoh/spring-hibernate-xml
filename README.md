@@ -4,6 +4,7 @@ This project is a sample of a Spring/Hibernate project with **XML configuration*
 
 ## Project structure
 
+```
 Project
  |  src
  |   |-main
@@ -48,6 +49,7 @@ Project
  |   |       |-logback-test.xml
  |   |       |-spring-hibernate-xml-test.xml
  pom.xml
+```
 
 ## Database
 
