@@ -11,15 +11,16 @@ Project
  |   |   |-java
  |   |   |   |-com
  |   |   |       |-dohbedoh
+ |   |   |           |-SpringHibernateXml.java
  |   |   |           |-dao
- |   |   |  			 |-AbstractDAO.java
- |   |   |  			 |-CompanyDAO.java
+ |   |   |               |-AbstractDAO.java
+ |   |   |               |-CompanyDAO.java
  |   |   |               |-impl
- |   |   |  				 |-CompanyDAOImpl.java
+ |   |   |                   |-CompanyDAOImpl.java
  |   |   |           |-model
- |   |   |  			 |-Company.java
+ |   |   |               |-Company.java
  |   |   |           |-service
- |   |   |  			 |-CompanyService.java
+ |   |   |               |-CompanyService.java
  |   |   |-resources
  |   |       |-logback.xml
  |   |       |-spring-hibernate-xml.xml
