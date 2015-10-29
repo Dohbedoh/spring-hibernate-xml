@@ -4,21 +4,23 @@ This project is a sample of a Spring/Hibernate project with **XML configuration*
 
 ## Project structure
 
+```
 Project
  |  src
  |   |-main
  |   |   |-java
  |   |   |   |-com
  |   |   |       |-dohbedoh
+ |   |   |           |-SpringHibernateXml.java
  |   |   |           |-dao
- |   |   |  			 |-AbstractDAO.java
- |   |   |  			 |-CompanyDAO.java
+ |   |   |               |-AbstractDAO.java
+ |   |   |               |-CompanyDAO.java
  |   |   |               |-impl
- |   |   |  				 |-CompanyDAOImpl.java
+ |   |   |                   |-CompanyDAOImpl.java
  |   |   |           |-model
- |   |   |  			 |-Company.java
+ |   |   |               |-Company.java
  |   |   |           |-service
- |   |   |  			 |-CompanyService.java
+ |   |   |               |-CompanyService.java
  |   |   |-resources
  |   |       |-logback.xml
  |   |       |-spring-hibernate-xml.xml
@@ -48,6 +50,7 @@ Project
  |   |       |-logback-test.xml
  |   |       |-spring-hibernate-xml-test.xml
  pom.xml
+```
 
 ## Database
 
