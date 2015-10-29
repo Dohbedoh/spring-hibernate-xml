@@ -11,7 +11,7 @@
     <packaging>war</packaging>
 
     <name>spring-hibernate-xml</name>
-    <description>Sandbox for Spring/Hibernate framework</description>
+    <description>Sandbox for Spring/Hibernate framework using XML configuration</description>
 
     <properties>
         <!-- Generic properties -->
@@ -25,7 +25,7 @@
         <!-- Spring -->
         <spring-framework.version>4.2.2.RELEASE</spring-framework.version>
         <!-- Hibernate / JPA -->
-         <hibernate.version>4.3.5.Final</hibernate.version>
+        <hibernate.version>4.3.5.Final</hibernate.version>
         <!-- MySQL connector -->
         <mysql-connector.version>5.1.30</mysql-connector.version>
         <!-- Apache DBCP -->
@@ -35,23 +35,46 @@
         <slf4j.version>1.7.5</slf4j.version>
     </properties>
 
+    <dependencyManagement>
+        <!-- Ensure all Spring dependencies are of the same version (Bill of Materials) -->
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring-framework.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
 
         <!-- Spring Context -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${spring-framework.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- Spring ORM support -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>${spring-framework.version}</version>
         </dependency>
 
         <!-- Logging with SLF4J & LogBack -->
+        <!--Bridge from JCL (Spring) to SLF4J -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
         <!--SLF4J - Logging Facade-->
         <dependency>
             <groupId>org.slf4j</groupId>
